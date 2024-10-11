@@ -105,7 +105,7 @@ PORT3,     -PORT4,
 
 );
 
-int current_auton_selection = 0;
+int current_auton_selection = 2;
 bool auto_started = false;
 
 /**
@@ -177,6 +177,12 @@ void autonomous(void) {
   { 
     case 0:
       RedPositive();
+      break;
+    case 1:
+      BluePositive();
+      break;
+    case 2:
+      RedPositiv2();
       break;
   
  }

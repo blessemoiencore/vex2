@@ -9,3 +9,7 @@ void default_constants();
 
 
 void RedPositive();
+void BluePositive();
+
+void RedPositiv2();
+void BluePositiv2();

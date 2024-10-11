@@ -58,6 +58,92 @@ chassis.turn_to_angle(180);
 intake.stop();
 intake.spin(reverse);
 chassis.drive_max_voltage = 12;
+chassis.drive_distance(-11.5);
+//chassis.drive_distance(-4.5);
+default_constants();
+grab.set(true);
+wait(0.2,seconds);
+conveyor.spin(forward);
+wait(1, seconds);
+conveyor.spinFor(reverse, .2, seconds);
+grab.set(false);
+wait(0.2,seconds);
+chassis.turn_to_angle(55, 5.5);
+chassis.drive_distance(-32, 50);
+intake.spin(reverse); // check this spot
+grab.set(true);
+conveyor.spin(forward);
+intake.spin(forward);
+//intake.stop();
+wait(0.1,sec);
+//intake.spin(forward);
+//chassis.drive_distance(26, 186);
+chassis.turn_to_angle(148, 5.5);
+chassis.drive_distance(23, 148);
+wait(.5, seconds);
+chassis.drive_distance(-10);
+chassis.turn_to_angle(270);
+intake.spin(reverse);
+chassis.drive_distance(20);
+
+
+/*
+
+chassis.drive_max_voltage = 10;
+chassis.drive_distance(57,188,8, 
+chassis.turn_max_voltage
+);
+
+/*
+
+chassis.drive_distance(10); 
+chassis.turn_to_angle(210);
+chassis.drive_distance(-4);
+grab.set(true);
+conveyor.spinFor(forward,1,seconds);
+/*
+chassis.drive_distance(15);
+chassis.turn_to_angle(180);
+chassis.drive_distance(48);
+conveyor.spinFor(forward,1,seconds);
+grab.set(false);
+chassis.drive_distance(8);
+chassis.turn_to_angle(150);
+chassis.drive_distance(10);
+grab.set(true);
+chassis.turn_to_angle(225);
+conveyor.spin(forward);
+chassis.drive_distance(15);
+conveyor.stop();
+chassis.turn_to_angle(0);
+chassis.drive_distance(15); */
+}
+
+void BluePositive(){
+
+
+
+odom_constants();
+conveyor.setVelocity(100,percent);
+intake.setVelocity(100,percent);
+chassis.set_coordinates(0,0,0);
+intake.spinFor(reverse,0.3,seconds);
+intake.spin(forward,100,percent);
+chassis.drive_distance(10,0);
+conveyor.spin(forward,100,percent);
+chassis.drive_max_voltage = 4.5; //star
+chassis.drive_distance(27,0);
+conveyor.stop();
+wait(0.2,seconds);
+
+//have red plastice conveyor tooth near top
+default_constants();
+chassis.turn_max_voltage = 10;
+//chassis.turn_to_angle(180);
+chassis.turn_to_angle(180);
+intake.stop();
+intake.spin(reverse);
+chassis.drive_max_voltage = 12;
 chassis.drive_distance(-8);
 chassis.drive_distance(-4);
 default_constants();
@@ -68,7 +154,7 @@ grab.set(false);
 conveyor.spin(forward);
 wait(0.2,seconds);
 intake.spin(forward);
-chassis.turn_to_angle(50, 5.5);
+chassis.turn_to_angle(130, 5.5);
 chassis.drive_distance(-32, 50);
 intake.spin(reverse); // check this spot
 grab.set(true);
@@ -115,4 +201,96 @@ chassis.drive_distance(15);
 conveyor.stop();
 chassis.turn_to_angle(0);
 chassis.drive_distance(15); */
+}
+
+void RedPositiv2(){
+odom_constants();
+conveyor.setVelocity(100,percent);
+intake.setVelocity(100,percent);
+chassis.set_coordinates(0,0,0);
+intake.spin(reverse);
+chassis.drive_distance(-28,0);
+wait(.2, seconds);
+chassis.turn_to_angle(330, 7);
+chassis.drive_distance(-12.5,330);
+//chassis.drive_distance(-7, 330);
+grab.set(true);
+//wait(0.2,sec);
+chassis.turn_to_angle(0);
+intake.spin(forward);
+conveyor.spin(forward);
+wait(.2, seconds);
+//intake.spin(forward);
+//intake.spinFor(2,seconds);
+chassis.drive_distance(35,10);
+conveyor.spinFor(reverse, .2, seconds);
+chassis.turn_to_angle(90);
+grab.set(false);
+wait(.2, seconds);
+chassis.drive_max_voltage = 8;
+chassis.drive_distance(27,90);
+default_constants();
+conveyor.spin(forward);
+wait(1, seconds);
+//chassis.drive_distance(7,90);
+chassis.drive_distance(13,90);
+conveyor.stop();
+//wait(.2, seconds);
+conveyor.spinFor(forward, .2, seconds);
+chassis.drive_distance(-19,90);
+chassis.turn_to_angle(35);
+chassis.drive_distance(-20,35);
+
+grab.set(true);
+wait(.2, seconds);
+conveyor.setVelocity(100,percent);
+conveyor.spin(forward);
+chassis.drive_distance(20,160);
+
+}
+
+void BluePositiv2(){
+odom_constants();
+conveyor.setVelocity(100,percent);
+intake.setVelocity(100,percent);
+chassis.set_coordinates(0,0,0);
+intake.spin(reverse);
+chassis.drive_distance(-28,0);
+wait(.2, seconds);
+chassis.turn_to_angle(30, 7);
+chassis.drive_distance(-12.5,30);
+//chassis.drive_distance(-7, 30);
+grab.set(true);
+//wait(0.2,sec);
+chassis.turn_to_angle(0);
+intake.spin(forward);
+conveyor.spin(forward);
+wait(.2, seconds);
+//intake.spin(forward);
+//intake.spinFor(2,seconds);
+chassis.drive_distance(35,350);
+conveyor.spinFor(reverse, .2, seconds);
+chassis.turn_to_angle(270);
+grab.set(false);
+wait(.2, seconds);
+chassis.drive_max_voltage = 8;
+chassis.drive_distance(27,270);
+default_constants();
+conveyor.spin(forward);
+wait(1, seconds);
+//chassis.drive_distance(7,270);
+chassis.drive_distance(13,270);
+conveyor.stop();
+//wait(.2, seconds);
+conveyor.spinFor(forward, .2, seconds);
+chassis.drive_distance(-19,270);
+chassis.turn_to_angle(325);
+chassis.drive_distance(-20,325);
+
+grab.set(true);
+wait(.2, seconds);
+conveyor.setVelocity(100,percent);
+conveyor.spin(forward);
+chassis.drive_distance(20,200);
+
 }
