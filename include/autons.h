@@ -13,3 +13,5 @@ void BluePositive();
 
 void RedPositiv2();
 void BluePositiv2();
+void LB_WP();
+void LR_WP();
